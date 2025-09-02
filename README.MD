@@ -3,7 +3,7 @@
 This little malloc writed in c
 It work with an array as the memory
 
-# Explanation
+## Explanation
 
 It start with the MEMORY definition
 an array of 1024
@@ -20,5 +20,10 @@ typedef struct Block {
 ```
 Now, To imagine the teory
 A good way to learn it is imagine a big lego box
-and for each lego is a block that save information
-And the legos are that Struct Block
+and for each lego is a block that save information,
+In this case the legos are that Struct Block
+```c
+Block* head = (void*)MEMORY;
+```
+There we define the Lego box (The **head**) to save all the Legos (**Blocks**),
+There we make transform the **MEMORY** to a usable Lego box (**Blocks**)
