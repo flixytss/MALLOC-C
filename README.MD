@@ -40,7 +40,7 @@ by defining the Properties of the Lego box (The **head**)
     head->next=NULL;
 ```
 Here we say that the next Lego box next to the Lego box (The **head**) is NULL,
-Because is just one Lego box
+Because we define just one box
 There we define the Lego box (The **head**) to save all the Legos (**Blocks**),
 There we make transform the **MEMORY** to a usable Lego box (**Blocks**)
 ```c
