@@ -18,6 +18,7 @@ void* malloc(unsigned int size){
             curr->free=0;
             return (void*)(curr+1);
         }
+        curr=curr->next;
     }
     return NULL;
 }

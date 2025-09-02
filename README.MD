@@ -27,3 +27,21 @@ Block* head = (void*)MEMORY;
 ```
 There we define the Lego box (The **head**) to save all the Legos (**Blocks**),
 There we make transform the **MEMORY** to a usable Lego box (**Blocks**)
+```c
+void* malloc(unsigned int size){
+    Block* curr = head;
+    while (curr!=NULL) {
+        if(curr->free&&curr->size>=size){
+            curr->free=0;
+            return (void*)(curr+1);
+        }
+        curr=curr->next;
+    }
+    return NULL;
+}
+```
+There is the principal **Void* Function** that returns the closest Lego (**Block**) Pointer
+```c
+Block* curr = head;
+```
+Here we define a pointer of the Lego Box (**Head**)
