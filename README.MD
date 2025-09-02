@@ -67,3 +67,26 @@ If that dosent true it will point to the next Lego (**Block**)
 curr=curr->next;
 ```
 And finally it returns **NULL** if there's no space avaible in the **Virtual Memory**
+
+## Free the memory
+Here we gonna free the memory that we dont want to use anymore
+```c
+void free(void* ptr){
+    if(ptr!=NULL)return;
+    Block* curr = (void*)ptr-1;
+    curr->free=1;
+}
+```
+There is a **Void Function** that need a Lego (**Block**) Memory address (Ptr (Pointer))
+```c
+if(ptr!=NULL)return;
+```
+If the Pointer is **NULL** it will return nothing,
+```c
+Block* curr = (void*)ptr-1;
+```
+There we define our Lego (**Block**)
+```c
+curr->free=1;
+```
+And finally we free it, it's ready to use it again
