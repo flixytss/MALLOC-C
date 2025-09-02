@@ -44,10 +44,9 @@ There is the principal **Void* Function** that returns the closest Lego (**Block
 ```c
 Block* curr = head;
 ```
-Here we define a pointer of the Lego Box (**Head**)
+There we are in the first Lego (**Block**)
 ```c
-while (curr!=NULL) {//Existing Code...
-}
+while (curr!=NULL) {/*Existing code...*/}
 ```
 It runs the Lego box (**Head**) until it found one that's free and it size
 dosent overflow the **MEMORY** size with the next code
@@ -62,4 +61,9 @@ And the
 ```c
 return (void*)(curr+1);
 ```
-Returns the Lego (**Block**) Pointer
+Returns the Lego (**Block**) Pointer,
+If that dosent true it will point to the next Lego (**Block**)
+```c
+curr=curr->next;
+```
+And finally it returns **NULL** if there's no space avaible in the **Virtual Memory**
