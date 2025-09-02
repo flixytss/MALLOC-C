@@ -1,6 +1,6 @@
 # MALLOC - C
 
-This little malloc writed in c
+This little malloc writed in C
 It work with an array as the memory
 
 ## Explanation
@@ -45,3 +45,21 @@ There is the principal **Void* Function** that returns the closest Lego (**Block
 Block* curr = head;
 ```
 Here we define a pointer of the Lego Box (**Head**)
+```c
+while (curr!=NULL) {//Existing Code...
+}
+```
+It runs the Lego box (**Head**) until it found one that's free and it size
+dosent overflow the **MEMORY** size with the next code
+```c
+        if(curr->free&&curr->size>=size){
+            curr->free=0;
+            return (void*)(curr+1);
+        }
+```
+There we use the closest free Lego (**Block**) to use,
+And the 
+```c
+return (void*)(curr+1);
+```
+Returns the Lego (**Block**) Pointer
